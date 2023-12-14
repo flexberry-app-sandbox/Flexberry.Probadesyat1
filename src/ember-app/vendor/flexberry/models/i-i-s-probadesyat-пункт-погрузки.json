@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISProbadesyatПунктПогрузки",
+  "modelName": "i-i-s-probadesyat-пункт-погрузки",
+  "className": "ПунктПогрузки",
+  "nameSpace": "IIS.Probadesyat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наимПунктаПог",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПунктПогрузкиE",
+      "modelName": "i-i-s-probadesyat-пункт-погрузки",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наимПунктаПог",
+          "caption": "Наим пункта пог",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПунктПогрузкиL",
+      "modelName": "i-i-s-probadesyat-пункт-погрузки",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наимПунктаПог",
+          "caption": "Наим пункта пог",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,116 @@
+<h3 class="ui header">{{t "forms.i-i-s-probadesyat-формир-рез-пос-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probadesyat-формир-рез-пос-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-probadesyat-формир-рез-пос-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probadesyat-формир-рез-пос-e.формирРаспр-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.формирРаспр
+      displayAttributeName="номерДокРаспр"
+      autocomplete=true
+      relationName="формирРаспр"
+      projection="ФормирРаспрL"
+      title=(t "forms.i-i-s-probadesyat-формир-рез-пос-e.формирРаспр-caption")
+      readonly=readonly
+      componentName="формирРаспрLookup"
+      class=(if (v-get validationModel "формирРаспр" "isInvalid") "error")
+      data-test-i-i-s-probadesyat-формир-рез-пос-e-формирРаспр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "формирРаспр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.формирРаспр.докумПоставки.клиенты.наимЗаказчика
+      class=(if (v-get validationModel.формирРаспр.докумПоставки.клиенты "наимЗаказчика" "isInvalid") "error")
+      label=(t "forms.i-i-s-probadesyat-формир-рез-пос-e.формирРаспр.докумПоставки.клиенты.наимЗаказчика-caption")
+      data-test-i-i-s-probadesyat-формир-рез-пос-e-формирРаспр-докумПоставки-клиенты-наимЗаказчика=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.формирРаспр.докумПоставки.клиенты "наимЗаказчика" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.формирРаспр.докумПоставки.клиенты.телефон
+      class=(if (v-get validationModel.формирРаспр.докумПоставки.клиенты "телефон" "isInvalid") "error")
+      label=(t "forms.i-i-s-probadesyat-формир-рез-пос-e.формирРаспр.докумПоставки.клиенты.телефон-caption")
+      data-test-i-i-s-probadesyat-формир-рез-пос-e-формирРаспр-докумПоставки-клиенты-телефон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.формирРаспр.докумПоставки.клиенты "телефон" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.формирРаспр.докумПоставки.клиенты.адресПоставки
+      class=(if (v-get validationModel.формирРаспр.докумПоставки.клиенты "адресПоставки" "isInvalid") "error")
+      label=(t "forms.i-i-s-probadesyat-формир-рез-пос-e.формирРаспр.докумПоставки.клиенты.адресПоставки-caption")
+      data-test-i-i-s-probadesyat-формир-рез-пос-e-формирРаспр-докумПоставки-клиенты-адресПоставки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.формирРаспр.докумПоставки.клиенты "адресПоставки" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-probadesyat-формир-рез-пос-e-статусЗаказа="true">
+    <label>{{t "forms.i-i-s-probadesyat-формир-рез-пос-e.статусЗаказа-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-probadesyat-состоян-заказа")
+      value=model.статусЗаказа
+      class=(if (v-get validationModel "статусЗаказа" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статусЗаказа" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probadesyat-формир-рез-пос-e.наличДеф-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.наличДеф
+      class=(if (v-get validationModel "наличДеф" "isInvalid") "error")
+      data-test-i-i-s-probadesyat-формир-рез-пос-e-наличДеф=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наличДеф" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-probadesyat-формир-рез-пос-e-удовлКлиента="true">
+    <label>{{t "forms.i-i-s-probadesyat-формир-рез-пос-e.удовлКлиента-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-probadesyat-удовл-кл")
+      value=model.удовлКлиента
+      class=(if (v-get validationModel "удовлКлиента" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "удовлКлиента" "message")}}
+  </div>
+</form>

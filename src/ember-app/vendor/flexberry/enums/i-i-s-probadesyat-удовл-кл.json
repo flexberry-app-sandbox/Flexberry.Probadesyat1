@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Probadesyat",
+  "className": "УдовлКл",
+  "enumObjects": {
+    "Удовлетворен": "",
+    "НеУдовлетворен": ""
+  }
+}

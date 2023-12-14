@@ -1,0 +1,102 @@
+﻿{
+  "applicationCaption": "Probadesyat",
+  "applicationTitle": "Probadesyat",
+  "items": [
+    {
+      "link": null,
+      "menuName": "логистика",
+      "caption": "Логистика",
+      "title": "Логистика",
+      "children": [
+        {
+          "link": "i-i-s-probadesyat-клиенты-l",
+          "menuName": null,
+          "caption": "Клиенты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": null,
+          "menuName": "документы",
+          "caption": "Документы",
+          "title": "Документы",
+          "children": [
+            {
+              "link": "i-i-s-probadesyat-формир-рез-пос-l",
+              "menuName": null,
+              "caption": "Формирование результата поставки",
+              "title": "Формир рез пос",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probadesyat-формир-распр-l",
+              "menuName": null,
+              "caption": "Формирование документа распределения",
+              "title": "Формир распр",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probadesyat-докум-поставки-l",
+              "menuName": null,
+              "caption": "Документ поставки",
+              "title": "Докум поставки",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "данные-об-организации",
+          "caption": "Данные об организации",
+          "title": "Данные об организации",
+          "children": [
+            {
+              "link": "i-i-s-probadesyat-организация-l",
+              "menuName": null,
+              "caption": "Организация",
+              "title": "Организация",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probadesyat-список-барж-l",
+              "menuName": null,
+              "caption": "Список барж",
+              "title": "Список барж",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probadesyat-список-контей-l",
+              "menuName": null,
+              "caption": "Список контейнеров",
+              "title": "Список контей",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probadesyat-пункт-погрузки-l",
+              "menuName": null,
+              "caption": "Пункт погрузки",
+              "title": "Пункт погрузки",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "номенклатура",
+          "caption": "Номенклатура",
+          "title": "Номенклатура",
+          "children": [
+            {
+              "link": "i-i-s-probadesyat-товары-l",
+              "menuName": null,
+              "caption": "Товары",
+              "title": "Товары",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

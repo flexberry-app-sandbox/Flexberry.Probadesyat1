@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probadesyat-формир-распр-e",
+  "editForm": "i-i-s-probadesyat-формир-распр-e",
+  "external": false,
+  "caption": "Формир распр",
+  "name": "IISProbadesyatФормирРаспрL",
+  "className": "ФормирРаспрL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probadesyat-формир-распр",
+      "modelProjection": "ФормирРаспрL"
+    }
+  ]
+}

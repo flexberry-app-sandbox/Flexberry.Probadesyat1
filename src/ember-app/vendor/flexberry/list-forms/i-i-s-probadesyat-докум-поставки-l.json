@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probadesyat-докум-поставки-e",
+  "editForm": "i-i-s-probadesyat-докум-поставки-e",
+  "external": false,
+  "caption": "Докум поставки",
+  "name": "IISProbadesyatДокумПоставкиL",
+  "className": "ДокумПоставкиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probadesyat-докум-поставки",
+      "modelProjection": "ДокумПоставкиL"
+    }
+  ]
+}

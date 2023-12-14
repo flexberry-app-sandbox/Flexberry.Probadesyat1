@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probadesyat-клиенты-e",
+  "editForm": "i-i-s-probadesyat-клиенты-e",
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISProbadesyatКлиентыL",
+  "className": "КлиентыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probadesyat-клиенты",
+      "modelProjection": "КлиентыL"
+    }
+  ]
+}
